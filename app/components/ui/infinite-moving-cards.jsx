@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-
+import Image from "next/image";
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
@@ -53,6 +53,13 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+  const imagestyle={
+    height:'20vh',
+    width:"10vw",
+    borderRadius:"20px",
+    marginRight:"10px"
+    // borderRadius:"50%"
+  }
   return (
     (<div
       ref={containerRef}
@@ -69,12 +76,21 @@ export const InfiniteMovingCards = ({
         )}>
         {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border  flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]"
+            className="w-[350px] max-w-full flex relative rounded-2xl border  flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]"
             style={{
               background:
                 "linear-gradient(180deg, var(--gray-100), var(--gray-200)",
             }}
             key={item.name}>
+              {/* <div className=" w-full mr-10 rounded-xl"> */}
+               <Image
+               src={item.images}
+              style={imagestyle}
+              height={500}
+              width={500}
+               alt="emp-img"
+               />
+              {/* </div> */}
             <blockquote>
               <div
                 aria-hidden="true"

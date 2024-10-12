@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import { NextUIProvider } from '@nextui-org/react';
 import "./globals.css";
 import App from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 // import MainNav from "./components/Navbar/Navbar";
 
 
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <NextUIProvider>
           <App/>
         {children}
+        <Footer/>
         </NextUIProvider>
       </body>
     </html>
