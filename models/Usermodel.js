@@ -2,16 +2,16 @@ import mongoose from "mongoose";
 const userschema=new mongoose.Schema({
     userClerkId:{
         type:String,
-        require:true
+        // require:true
     },
     name:{
         type:String,
-        require:true,
+        // require:true,
     },
     email:
     {
     type:String,
-    require:true,
+    // require:true,
     unique:true
     },
     role: {
@@ -56,5 +56,5 @@ const userschema=new mongoose.Schema({
       }],
     }, { timestamps: true });
 
-    const user=mongoose.model('User',userschema);
+    const user=mongoose.models.User ||mongoose.model('User',userschema);
     export default user;

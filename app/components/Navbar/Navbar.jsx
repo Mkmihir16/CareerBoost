@@ -6,9 +6,9 @@ import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from '@cl
 import { useUser } from "@clerk/nextjs";
 export default function App() {
   const user=useUser();
-  if(user.user){
-    console.log(user.user);
-  }
+  // if(user.user){
+  //   console.log(user.user);
+  // }
   
   const menuItems = [
     "Jobs",
